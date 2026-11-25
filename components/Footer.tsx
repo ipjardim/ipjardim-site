@@ -79,12 +79,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-          <p>
-            © {new Date().getFullYear()} Igreja Presbiteriana do Jardim. Todos os direitos
-            reservados.
-          </p>
-          <p>
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500 text-center md:text-left">
+          <div className="space-y-1">
+            <p>
+              © {new Date().getFullYear()} Igreja Presbiteriana do Jardim. Todos os direitos reservados.
+            </p>
+            <p className="text-gray-400">
+              IGREJA PRESBITERIANA DO JARDIM • CNPJ: 46.141.797/0001-48
+            </p>
+          </div>
+          <p className="text-center md:text-right">
             Desenvolvido com ❤️ para a glória de Deus
           </p>
         </div>
