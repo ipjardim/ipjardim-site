@@ -5,10 +5,10 @@ import Link from "next/link";
 import logoColorida from "@/public/logos/logo-colorida.png";
 
 const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#cultos", label: "Cultos" },
-  { href: "#eventos", label: "Eventos" },
-  { href: "#contato", label: "Contato" },
+  { href: "/", label: "Início" },
+  { href: "/sobre", label: "Quem Somos" },
+  { href: "/cultos", label: "Cultos" },
+  { href: "/contato", label: "Contato" },
 ];
 
 export default function Navbar() {
@@ -52,7 +52,7 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className={`text-sm font-semibold tracking-wide transition-colors hover:text-verde-medio ${
@@ -60,14 +60,14 @@ export default function Navbar() {
               }`}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contato"
+          <Link
+            href="/contato"
             className="bg-verde-primario text-white text-sm font-bold px-5 py-2 rounded-full hover:bg-verde-escuro transition-colors"
           >
             Visitar a Igreja
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile hamburger */}
@@ -88,22 +88,22 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-white shadow-lg px-4 py-4 space-y-3">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               onClick={() => setMenuOpen(false)}
               className="block text-gray-700 font-semibold text-sm py-2 border-b border-gray-100"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contato"
+          <Link
+            href="/contato"
             onClick={() => setMenuOpen(false)}
             className="block bg-verde-primario text-white text-sm font-bold px-5 py-2 rounded-full text-center mt-2"
           >
             Visitar a Igreja
-          </a>
+          </Link>
         </div>
       )}
     </header>

@@ -94,7 +94,7 @@ export default function Cultos() {
           </p>
           <p className="text-gray-500 text-xs mt-3 leading-relaxed">
             Dúvidas sobre os cultos?{" "}
-            <a href="#contato" className="text-verde-primario font-semibold hover:underline">
+            <a href="/contato" className="text-verde-primario font-semibold hover:underline">
               Entre em contato
             </a>
           </p>

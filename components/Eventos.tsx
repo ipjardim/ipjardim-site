@@ -69,7 +69,7 @@ export default function Eventos() {
         {/* CTA */}
         <div className="text-center mt-12">
           <a
-            href="#contato"
+            href="/contato"
             className="inline-block bg-white text-verde-escuro font-bold px-8 py-4 rounded-full text-sm hover:bg-verde-suave transition-colors shadow-lg"
           >
             Quero visitar a Igreja

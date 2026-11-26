@@ -45,35 +45,35 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#cultos"
+            href="/cultos"
             className="bg-white text-verde-escuro font-bold px-8 py-4 rounded-full text-sm tracking-wide hover:bg-verde-suave transition-all shadow-lg hover:shadow-xl"
           >
             Nossos Cultos
           </a>
           <a
-            href="#sobre"
+            href="/sobre"
             className="border-2 border-white text-white font-bold px-8 py-4 rounded-full text-sm tracking-wide hover:bg-white/10 transition-all"
           >
             Conheça a Igreja
           </a>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg
-            className="w-6 h-6 text-white/60"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </div>
+      {/* Scroll indicator - fixado na base da seção */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 animate-bounce pointer-events-none hidden md:block">
+        <svg
+          className="w-6 h-6 text-white/50"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
       </div>
     </section>
   );

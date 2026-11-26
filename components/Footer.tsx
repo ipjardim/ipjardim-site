@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import logoBranco from "@/public/logos/logo-branco.png";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-10 mb-10">
+        <div className="grid md:grid-cols-4 gap-10 mb-10">
           {/* Logo e descrição */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
+          <div className="md:col-span-1">
+            <Link href="/" className="flex items-center gap-3 mb-4 inline-flex">
               <Image
                 src={logoBranco}
                 alt="IPJardim"
@@ -22,8 +23,8 @@ export default function Footer() {
                 </p>
                 <p className="text-verde-claro font-black text-sm">do Jardim</p>
               </div>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            </Link>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Uma comunidade fundada na Palavra de Deus, comprometida com o Evangelho
               e o serviço ao próximo. Campina Grande — PB.
             </p>
@@ -32,32 +33,80 @@ export default function Footer() {
           {/* Links rápidos */}
           <div>
             <h4 className="font-bold text-verde-claro text-sm uppercase tracking-widest mb-4">
-              Links Rápidos
+              Navegação
             </h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              {["Sobre", "Cultos", "Eventos", "Contato"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase().replace("é", "e")}`}
-                    className="hover:text-verde-claro transition-colors"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link href="/" className="hover:text-verde-claro transition-colors">
+                  Início
+                </Link>
+              </li>
+              <li>
+                <Link href="/sobre" className="hover:text-verde-claro transition-colors">
+                  Quem Somos
+                </Link>
+              </li>
+              <li>
+                <Link href="/cultos" className="hover:text-verde-claro transition-colors">
+                  Cultos e Horários
+                </Link>
+              </li>
+              <li>
+                <Link href="/contato" className="hover:text-verde-claro transition-colors">
+                  Contato e Localização
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Horários */}
+          {/* Contato & E-mails Oficiais */}
+          <div>
+            <h4 className="font-bold text-verde-claro text-sm uppercase tracking-widest mb-4">
+              E-mails & Contato
+            </h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li>
+                <p className="text-xs uppercase font-bold text-gray-300">E-mail Institucional:</p>
+                <a
+                  href="mailto:administracao@ipjardim.com.br"
+                  className="text-verde-claro hover:underline break-all"
+                >
+                  administracao@ipjardim.com.br
+                </a>
+              </li>
+              <li>
+                <p className="text-xs uppercase font-bold text-gray-300">Secretaria / Geral:</p>
+                <a
+                  href="mailto:igrejapresbiterianajardim@gmail.com"
+                  className="hover:text-verde-claro transition-colors break-all"
+                >
+                  igrejapresbiterianajardim@gmail.com
+                </a>
+              </li>
+              <li>
+                <p className="text-xs uppercase font-bold text-gray-300">Telefone / WhatsApp:</p>
+                <a
+                  href="https://wa.me/5583993330203"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-verde-claro transition-colors"
+                >
+                  (83) 99333-0203
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Horários e Redes */}
           <div>
             <h4 className="font-bold text-verde-claro text-sm uppercase tracking-widest mb-4">
               Cultos
             </h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
               <li>Domingo — 9h30 (EBD) e 18h00 (Culto Solene)</li>
               <li>Quinta-feira — 19h30 (Oração e Doutrina)</li>
             </ul>
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-3">
               {[
                 { icon: "📸", label: "Instagram", url: "https://www.instagram.com/ipbjardim" },
                 { icon: "▶️", label: "YouTube", url: "https://www.youtube.com/@IgrejaPresbiterianadoJardim" },
@@ -79,16 +128,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500 text-center md:text-left">
+        {/* Dados da Organização / Transparência */}
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center md:text-left">
           <div className="space-y-1">
-            <p>
-              © {new Date().getFullYear()} Igreja Presbiteriana do Jardim. Todos os direitos reservados.
-            </p>
-            <p className="text-gray-400">
+            <p className="font-medium text-gray-300">
               IGREJA PRESBITERIANA DO JARDIM • CNPJ: 46.141.797/0001-48
             </p>
+            <p>
+              Av. Jorn. Assis Chateaubriand, 1322 — Liberdade, Campina Grande - PB • CEP: 58414-060
+            </p>
+            <p className="text-gray-500">
+              © {new Date().getFullYear()} Todos os direitos reservados.
+            </p>
           </div>
-          <p className="text-center md:text-right">
+          <p className="text-center md:text-right text-gray-500">
             Desenvolvido com ❤️ para a glória de Deus
           </p>
         </div>

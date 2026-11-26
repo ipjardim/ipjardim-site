@@ -41,8 +41,9 @@ export default function Contato() {
                 },
                 {
                   icon: "✉️",
-                  titulo: "E-mail",
-                  texto: "igrejapresbiterianajardim@gmail.com",
+                  titulo: "E-mails Oficiais",
+                  texto:
+                    "Institucional: administracao@ipjardim.com.br\nSecretaria / Geral: igrejapresbiterianajardim@gmail.com",
                 },
                 {
                   icon: "🕐",

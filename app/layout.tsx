@@ -23,11 +23,6 @@ export const metadata: Metadata = {
   description:
     "Bem-vindo à Igreja Presbiteriana do Jardim — uma comunidade de fé, amor e esperança fundada na Palavra de Deus.",
   keywords: ["igreja", "presbiteriana", "jardim", "culto", "cristã", "evangélica"],
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
-  },
 };
 
 export default function RootLayout({
